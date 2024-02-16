@@ -9,7 +9,7 @@ form.addEventListener("submit", async event => {
   const password = passwordInput.value
   const username = usernameInput.value
 
-  const result = await fetch('http://localhost:8080/users', {
+  const result = await fetch('http://localhost:3000/users', {
     method: 'POST',
     mode: 'cors',
     headers: {
