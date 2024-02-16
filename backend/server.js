@@ -37,5 +37,5 @@ app.post('/users', (req, res) => {
   }
 })
 
-PORT= 8080
+PORT= 80
 app.listen(PORT,'0.0.0.0',() => console.log(`listening on port ${PORT}`))
