@@ -10,6 +10,11 @@ app.use(express.static('../frontend'));
 
 const validatePassword = require('./validatePassword.js')
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/index.html'));
+});
+
+
 app.post('/users', (req, res) => {
   const { username, password } = req.body
   
@@ -32,5 +37,5 @@ app.post('/users', (req, res) => {
   }
 })
 
-
-app.listen(8080, () => console.log("listening on port 8080"))
+PORT= 8080
+app.listen(PORT,'0.0.0.0',() => console.log(`listening on port ${PORT}`))
